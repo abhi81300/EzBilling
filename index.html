@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billint</title>
+    <link id="stylesheets" rel="stylesheet" href="style copy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <p>Billing Site</p>
+    </header>
+    <div class="info">
+        <div>
+            <label for="name" s>Name:</label>
+            <input type="text" id="name">
+        </div>
+        <div>
+            <label for="number">Number:</label>
+            <input type="number" id="number">
+        </div>
+        <div>
+            <label for="cars">Payment Mode</label>
+            <select name="cars" id="cars">
+                <option value="volvo">Card</option>
+                <option value="saab">Cash</option>
+                <option value="mercedes">Online</option>
+            </select>
+        </div>
+        <div> <label for="billid">Order ID:</label>
+            <input type="text" id="billid">
+        </div>
+
+        <button class="addbtn" id="delete">New</button>
+    </div>
+    <div class="main">
+        <div class="items">
+            <div class="add">
+                <div>
+                    <label for="itmname">Product Name</label>
+                    <input type="text" class="itmadd" id="itmname">
+                    <div id="suggestions"></div>
+                </div>
+                <div>
+                    <label for="qty">Quantity</label>
+                    <input type="number" class="itmadd" id="qty">
+                </div>
+
+                <button class="addbtn" id="addbutton">ADD</button>
+            </div>
+            <div class="itmtab">
+                <table id="productTable">
+                    <thead>
+                        <th style="scale: 0.8;">&uarr;&darr;</th>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                        <th>Rate</th>
+                        <th>Amount</th>
+                        <th><button><i style="font-size:24px" class="fa">&#xf00d;</i></button></th>
+                    </thead>
+                    <tbody id="billtable">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="cal">
+            <div class="tax">
+                <div class="taxcont">Amount Before Tax
+                    <span class="taxcontv" id="totalamt">₹ 0
+                    </span>
+                </div>
+                <div class="taxcont"><span id="vat-per"></span>
+                    <span class="taxcontv" id="vatx">₹ 0
+                    </span>
+                </div>
+                <div class="taxcont"><span id="sc-per"></span>
+                    <span class="taxcontv" id="sctx">₹ 0
+                    </span>
+                </div>
+                <div class="taxcont"><span id="st-per"></span>
+                    <span class="taxcontv" id="stx">₹ 0
+                    </span>
+                </div>
+                <div class="taxcont"><span id="ot-per"></span>
+                    <span class="taxcontv" id="otx">₹ 0
+                    </span>
+                </div>
+                <div class="taxcont"><span>Tax Amount</span>
+                    <span class="taxcontv" id="txamt">₹ 0
+                    </span>
+                </div>
+                <div class="taxcont"><span>Round Off</span>
+                    <span class="taxcontv" id="round-of">₹ 0
+                    </span>
+                </div>
+            </div>
+            <div class="total">
+                <div class="taxcont">TOTAL :
+                    <span class="taxcontv" id="gndttl">₹ 0
+                    </span>
+                </div>
+                <div class="taxcont1">Total In Words:
+                    <div class="taxcontv1" id="result">Zero
+                    </div>
+                </div>
+                <button class="addbtn" id="printbtn">PRINT</button>
+            </div>
+        </div>
+
+        <!-- Modallll --------------------------------------------------->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" id="closebtn">&times;</span>
+                <p style="font-size: 2rem; margin-top: -50px;margin-bottom: 50px;">EDIT</p>
+                <div> <label for="itmname">Product Name: </label>
+                    <input type="text" class="itmadd" id="itmnameedit" readonly>
+                </div>
+                <div>
+                    <label for="qty">Quantity: </label>
+                    <input type="number" class="itmadd" id="qtyedit" autofocus>
+                </div>
+                <button id="mysavebtn" class="addbtn" style="width: fit-content; margin-left:5px">SAVE</button>
+            </div>
+
+        </div>
+        <!-- modal ----------------------------------------------------                            -->
+
+</body>
+<script src="./bundle.js"></script>
+
+</html>

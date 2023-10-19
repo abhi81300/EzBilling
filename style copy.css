@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
+
+:root {
+    --bgclr: #21262D
+}
+
+body {
+    background-color: var(--bgclr);
+    height: 100dvh;
+
+}
+
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0D1117;
+    color: white;
+    border-radius: 5px;
+    height: 3rem;
+    font-size: clamp(1rem, 5vw, 2rem);
+    font-family: myFirstFont;
+    border: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+header p {
+    background: -webkit-linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #1B8D5F;
+    position: relative;
+    margin-top: 10px;
+    border-radius: 5px;
+    height: 4rem;
+    border: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+.info label,
+label {
+    color: #ffffff;
+    font-family: 'Gabarito', sans-serif;
+    font-size: 1.5rem;
+}
+
+.info input,
+input {
+    height: 25px;
+    width: 250px;
+    border: 1px solid rgb(255, 255, 255);
+    outline: none;
+    border-radius: 50px;
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    padding: 5px;
+    font-size: 1.2rem;
+    color: white;
+    font-family: 'Gabarito', sans-serif;
+    transition: 500ms;
+
+
+}
+
+.info input:focus,
+input:focus {
+    box-shadow: 0px 0px 8px 5px #b8f5d8;
+}
+
+.info select {
+    text-align: left;
+    border: 1px solid rgb(255, 255, 255);
+    outline: none;
+    background-color: #1B8D5F;
+    font-family: 'Gabarito', sans-serif;
+    width: 125px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    transition: 200ms;
+    cursor: pointer;
+    padding: 5px;
+
+
+
+}
+
+.info select:focus,
+.info select:hover {
+    box-shadow: 0px 0px 20px 5px #b8f5d8;
+}
+
+.info section option {
+    outline: none;
+    cursor: pointer;
+    background-color: #1B8D5F;
+    color: #0073ff;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 800px;
+    background-color: #0C1015;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px 2px #383838;
+
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 60%;
+    height: 100;
+    background-color: #161B22;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+.cal {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 40%;
+    height: 100;
+    margin: 10px;
+    margin-left: 5px;
+    background-color: transparent;
+    border-radius: 5px;
+    gap: 10px;
+}
+
+.tax {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #161B22;
+    width: 100%;
+    height: 60%;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+.taxcont {
+    width: 90%;
+    color: #BDBFC6;
+    font-family: 'Gabarito', sans-serif;
+    font-size: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #0C1015;
+}
+
+.taxcontv {
+    position: relative;
+    float: right;
+    color: white;
+    background-color: #41474E;
+    width: fit-content;
+    height: 100;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 100px;
+}
+
+.total {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #161B22;
+    width: 100%;
+    height: 40%;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+.add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100;
+    background-color: #0D1117;
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    height: 10%;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.itmadd {
+    height: 25px;
+    width: 250px;
+    border: 1px solid rgba(255, 255, 255, 0.267);
+    outline: none;
+    border-radius: 10px;
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    padding: 5px;
+    font-size: 1.2rem;
+    color: white;
+    font-family: 'Gabarito', sans-serif;
+}
+
+.addbtn {
+    border: 1px solid rgba(255, 255, 255, 0.267);
+    border-radius: 10px;
+    height: 36px;
+    width: 70px;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    font-family: 'Gabarito', sans-serif;
+    font-size: 1.2rem;
+    transition: 200ms;
+}
+
+.addbtn:hover {
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.itmtab {
+    width: 100;
+    background-color: #0D1117;
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    height: 100%;
+    margin: 5px;
+    border-radius: 5px;
+    overflow: scroll;
+}
+
+.taxcont1 {
+    width: 90%;
+    color: #BDBFC6;
+    font-family: 'Gabarito', sans-serif;
+    font-size: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #0C1015;
+    height: 100;
+}
+
+.taxcontv1 {
+    position: relative;
+    color: white;
+    background-color: #41474E;
+    width: fit-content;
+    height: 100;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    color: #BDBFC6;
+    font-family: 'Gabarito', sans-serif;
+    font-size: 1.5rem;
+}
+
+table th,
+td {
+    border-top: none;
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    text-align: center;
+    padding: 8px;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(Witch\ Magic.ttf);
+}
+
+#suggestions {
+    width: 250px;
+    position: relative;
+    display: none;
+    position: absolute;
+    border: 1px solid #ccc;
+    height: auto;
+    overflow-y: auto;
+    border-radius: 5px;
+    background-color: #0C1015;
+    margin-left: 160px;
+}
+
+.suggestion-item {
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+    font-family: 'Gabarito', sans-serif;
+    font-size: 1.5rem;
+}
+
+
+.invoice {
+    page-break-before: always;
+}
+th button{
+    background-color: transparent;
+    border: none;
+
+}
+
+.fa1 {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+}
+
+th button i,
+.fa11,
+#fa11 {
+    color: white;
+
+}
+
+tbody tr:nth-child(odd) {
+    background: #232d3d;
+}
+
+table td:nth-child(1),
+table th:nth-child(1) {
+    width: 60px;
+}
+
+table td:nth-child(3),
+table th:nth-child(3) {
+    width: 150px;
+}
+
+table td:nth-child(4),
+table th:nth-child(4) {
+    width: 150px;
+}
+
+table td:nth-child(5),
+table th:nth-child(5) {
+    width: 150px;
+}
+
+table td:nth-child(6),
+table th:nth-child(6) {
+    width: 100px;
+}
+
+.modal {
+
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border-radius: 5px;
+    background-color: #161B22;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    color: rgb(255, 255, 255);
+    font-family: 'Gabarito', sans-serif;
+    box-shadow: 0px 0px 8px 2px #383838;
+}
+.close {
+    margin-left: 95%;
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    width: fit-content;
+    z-index: 1;
+}
+
+.close:hover,
+.close:focus {
+    color: #1B8D5F;
+    text-decoration: none;
+    cursor: pointer;
+}
+.fa11:hover,
+#fa11:hover {
+    color: rgb(129, 48, 48);
+    scale: 0.9;
+    transition: 200ms;
+
+}
+
+#myBtn:hover{
+    scale: 0.9;
+}

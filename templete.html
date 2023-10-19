@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>Something</header>
+    <div style="display: flex; position: relative;border-bottom: 2px solid black;height: 40px;display: flex;align-items: center;">
+        <span style="position: absolute;left: 1%;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px;">Date: <span id="date"></span></span>
+        <span style="position: absolute;right: 1%;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px;">Order ID: <span id="or-id"></span></span>
+    </div>
+    <div style="position: relative;">
+        <div style="position: relative;left: 1%;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px;margin-top: 5px;">Order Details:</div>
+        <div style="position: relative;left: 1%;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px;margin-top: 5px;" >Name: <span id="name"></span></div>
+        <div style="position: relative;left: 1%;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px;margin-top: 5px;" >Number: <span id="number"></span></div>
+        <div style="position: relative;left: 1%;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px;margin-top: 5px;">Payment Mode: <span id="paymentMethodPlaceholder"></span></div>
+        <div style="border-bottom: 2px solid;"></div>
+    </div>
+    <table style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" id="table">
+        <thead>
+            <thead>
+                <th>S.no</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Rate</th>
+                <th>Amount</th>
+            </thead>
+            <tbody>
+                
+            </tbody>
+            <tr>
+                <td colspan="3">Amount Before Tax</td>
+                <td colspan="2" id="amtbt">lol</td>
+            </tr>
+            <tr>
+                <td colspan="3"><span id="vat-per"></span></td>
+                <td colspan="2" id="vatv">lol</td>
+            </tr>
+            <tr>
+                <td colspan="3"><span id="sc-per"></span></td>
+                <td colspan="2" id="scv">lol</td>
+            </tr>
+            <tr>
+                <td colspan="3"><span id="st-per"></span></td>
+                <td colspan="2" id="stv">lol</td>
+            </tr>
+            <tr>
+                <td colspan="3"><span id="ot-per"></span></td>
+                <td colspan="2" id="otv">lol</td>
+            </tr>
+            <tr>
+                <td colspan="3">Tax Amount</td>
+                <td colspan="2" id="txamt">lol</td>
+            </tr>
+            <tr>
+                <td colspan="3">Round Off</td>
+                <td colspan="2" id="rdoff">lol</td>
+            </tr>
+            <tr>
+                <td colspan="3">TOTAL</td>
+                <td colspan="2" id="ttl">lol</td>
+            </tr>
+            <tr>
+                <td colspan="3">Total In Words:</td>
+                <td colspan="2" id="ttlinw">lol</td>
+            </tr>
+
+    </table>
+    <div style="position: relative;bottom:0;border-top: 2px solid black;width: 100%;text-align: center;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 40px;">Thank You</div>
+    <div class="invoice-page"></div>
+</body>
+<style>
+    html{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    body{
+    position: relative;
+    height:auto;
+    width:210mm;
+    border: 2px dashed ;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+header{
+    font-size: 50px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    border-bottom: 2px solid black;
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+}
+.st1{
+    position: absolute;left: 1%;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px;margin-top: 5px;
+}
+table{
+    border-collapse: collapse;
+}
+th{
+    border: 1px solid black;
+}
+td{
+    text-align: center;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+tr:last-child{
+    border-bottom: 1px solid black;
+}
+td:last-child,th:last-child{
+    border-right: 0px solid black;
+}
+td:first-child,th:first-child{
+    border-left: 0px solid black;
+}
+.invoice-page {
+            page-break-after: always;
+        }
+
+</style>
+<script>
+    setTimeout(function() {
+        window.stop();
+}, 2000);
+
+</script>
+</html>

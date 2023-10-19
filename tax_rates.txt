@@ -1,0 +1,4 @@
+VAT: 0
+Service Charge: 5
+Surge Tax: 0
+Other Tax: 5

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+<body>
+    <h2>Product Name Input with Suggestions</h2>
+    <!-- Your HTML content here -->
+
+    <script>
+        // Function to fetch tax rates from the text file
+        async function fetchTaxRates() {
+            try {
+                const response = await fetch('tax_rates.txt');
+                const data = await response.text();
+                const lines = data.split('\n');
+                const taxRates = {};
+
+                lines.forEach(line => {
+                    const [taxName, percentage] = line.split(':');
+                    const trimmedTaxName = taxName.trim();
+                    const parsedPercentage = parseFloat(percentage);
+                    if (trimmedTaxName && !isNaN(parsedPercentage)) {
+                        taxRates[trimmedTaxName] = parsedPercentage;
+                    }
+                });
+
+                // You can now use the taxRates object to access tax percentages
+                console.log(taxRates["VAT"]);
+
+            } catch (error) {
+                console.error('Error fetching tax rates:', error);
+            }
+        }
+
+        // Call the function to fetch tax rates when needed
+        fetchTaxRates();
+    </script>
+</body>
+</html>
